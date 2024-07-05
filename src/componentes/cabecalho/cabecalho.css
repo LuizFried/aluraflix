@@ -1,0 +1,27 @@
+.cabecalho{
+    width: 100%;
+    height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px;
+    box-sizing: border-box;
+    
+}
+
+.cabecalho img{
+    width: 168px;
+    height: 40px;
+}
+
+.div_button{
+    display: flex;
+    gap: 15px;
+}
+
+.cabecalho button{
+    width: 140px;
+    height: 45px;
+    border-radius: 10px;
+
+}
