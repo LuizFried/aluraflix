@@ -6,7 +6,7 @@ function Cabecalho({ onNovoVideoClick }) {
     const corBack = "#000000";
     
     return (
-        <header className='cabecalho' style={{ backgroundColor: hexToRgba(corBack, '0.85') }}>
+        <header className='cabecalho' >
             <div className='div_image'>
                 <img src='/imagens/AluraFlixLogo.png' alt="Logo" />
             </div>

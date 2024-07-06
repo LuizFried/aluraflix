@@ -1,0 +1,43 @@
+/* videoCard.css */
+
+.video-card {
+    position: relative;
+    width: 100%;
+    max-width: 300px; /* Largura máxima do card */
+    margin: 10px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom right, #4b0082, #800080); /* Gradiente de azul a roxo */
+}
+
+.video-card iframe {
+    display: block;
+    width: 100%;
+    height: 150px; /* Altura do vídeo */
+    border: none;
+}
+
+.card-info {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo preto transparente para legibilidade */
+    color: #fff;
+}
+
+.card-info h3 {
+    margin-bottom: 5px;
+}
+
+.card-info p {
+    font-size: 14px;
+}
+
+.close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+}

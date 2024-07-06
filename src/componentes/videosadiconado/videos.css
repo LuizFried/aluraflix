@@ -1,0 +1,21 @@
+/* VideosAdicionados.css */
+.videos-adicionados {
+    padding: 20px;
+}
+
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.video-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .videos-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}

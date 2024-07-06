@@ -1,7 +1,10 @@
+// App.js
+
 import React, { useState } from 'react';
 import Cabecalho from './componentes/cabecalho';
 import VideoCarrossel from './componentes/destaque';
 import Modal from './componentes/modal';
+import VideoSection from './componentes/videosection'; 
 
 function App() {
     const [mostrarFormulario, setMostrarFormulario] = useState(false);
@@ -10,13 +13,13 @@ function App() {
             id: 1,
             title: 'Teste Alura',
             description: 'Video promocional Alura',
-            videoId: 'nbcPBKqFGXU' // Exemplo de videoId correto de um vídeo do YouTube
+            videoId: 'nbcPBKqFGXU'
         },
         {
             id: 2,
             title: 'Título do Vídeo 2',
             description: 'Descrição do Vídeo 2',
-            videoId: 'VIDEO_ID_2' // Coloque o videoId correto ou ajuste na função adicionarVideo
+            videoId: 'VIDEO_ID_2'
         },
     ]);
 
@@ -38,13 +41,19 @@ function App() {
             videoId: videoId
         };
         setVideosData([...videosData, newVideo]);
-        fecharFormulario(); 
+        fecharFormulario();
+    };
+
+    const excluirVideo = (id) => {
+        const filteredVideos = videosData.filter(video => video.id !== id);
+        setVideosData(filteredVideos);
     };
 
     return (
         <div className="App">
             <Cabecalho onNovoVideoClick={abrirFormulario} />
             <VideoCarrossel videos={videosData} />
+            <VideoSection videos={videosData} onDelete={excluirVideo} /> {/* Nova seção de vídeos */}
             {mostrarFormulario && <Modal onClose={fecharFormulario} adicionarVideo={adicionarVideo} />}
         </div>
     );
