@@ -1,27 +1,67 @@
-.cabecalho{
-    width: 100%;
-    height: 125px;
+.cabecalho {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 0px 50px;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.85); /* Valor padrão */
+    width: 100%;
     box-sizing: border-box;
-    
 }
 
-.cabecalho img{
-    width: 168px;
-    height: 40px;
+.div_image img {
+    max-width: 100px; /* Limita o tamanho máximo da imagem */
+    height: auto;
 }
 
-.div_button{
+.div_button {
     display: flex;
-    gap: 15px;
+    gap: 10px;
 }
 
-.cabecalho button{
-    width: 140px;
-    height: 45px;
-    border-radius: 10px;
+.div_button button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap; /* Evita que o texto do botão quebre em linhas menores */
+}
 
+.div_button button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .div_button {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .div_button button {
+        margin: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cabecalho {
+        padding: 10px;
+    }
+
+    .div_button {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .div_button button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
 }
