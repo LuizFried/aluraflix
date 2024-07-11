@@ -1,4 +1,4 @@
-
+// src/componentes/videoCard/VideoCard.js
 import React from 'react';
 import './card.css';
 

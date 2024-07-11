@@ -1,3 +1,4 @@
+// src/componentes/modal/Modal.js
 import React, { useState } from 'react';
 import './modal.css';
 

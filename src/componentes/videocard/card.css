@@ -1,27 +1,27 @@
-/* videoCard.css */
+/* src/componentes/videoCard/videoCard.css */
 
 .video-card {
     position: relative;
     width: 100%;
-    max-width: 300px; /* Largura máxima do card */
+    max-width: 300px;
     margin: 10px;
     border: 1px solid #000;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(to bottom right, #4b0082, #800080); /* Gradiente de azul a roxo */
+    background: linear-gradient(to bottom right, #4b0082, #800080);
 }
 
 .video-card iframe {
     display: block;
     width: 100%;
-    height: 150px; /* Altura do vídeo */
+    height: 150px;
     border: none;
 }
 
 .card-info {
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo preto transparente para legibilidade */
+    background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
 }
 
@@ -30,14 +30,14 @@
 }
 
 .card-info p {
-    font-size: 14px;
+    font-size: 0.9rem;
 }
 
 .close {
     position: absolute;
     top: 5px;
     right: 5px;
+    font-size: 1.2rem;
     cursor: pointer;
-    font-size: 24px;
     color: #fff;
 }

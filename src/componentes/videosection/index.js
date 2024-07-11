@@ -1,5 +1,7 @@
+// src/componentes/videoSection/VideoSection.js
 import React from 'react';
-import VideoCard from './componentes/videoCard';
+import VideoCard from '../videocard';
+import './videosection.css';
 
 const VideoSection = ({ videos, onDelete }) => {
     return (

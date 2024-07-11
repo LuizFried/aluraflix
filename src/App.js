@@ -1,10 +1,10 @@
-// App.js
-
+// src/App.js
 import React, { useState } from 'react';
 import Cabecalho from './componentes/cabecalho';
 import VideoCarrossel from './componentes/destaque';
 import Modal from './componentes/modal';
-import VideoSection from './componentes/videosection'; 
+import VideoSection from './componentes/videosection';
+import './styles/video.css';
 
 function App() {
     const [mostrarFormulario, setMostrarFormulario] = useState(false);
@@ -53,7 +53,7 @@ function App() {
         <div className="App">
             <Cabecalho onNovoVideoClick={abrirFormulario} />
             <VideoCarrossel videos={videosData} />
-            <VideoSection videos={videosData} onDelete={excluirVideo} /> {/* Nova seção de vídeos */}
+            <VideoSection videos={videosData} onDelete={excluirVideo} />
             {mostrarFormulario && <Modal onClose={fecharFormulario} adicionarVideo={adicionarVideo} />}
         </div>
     );
