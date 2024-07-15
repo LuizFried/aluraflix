@@ -4,6 +4,8 @@
     align-items: center;
     padding: 10px 20px;
     background-color: #262626;
+    color: white;
+    box-shadow: 0 4px 10px rgba(128, 0, 128, 0.5);
 }
 
 .cabecalho img {

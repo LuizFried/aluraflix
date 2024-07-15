@@ -3,7 +3,7 @@ import './cabecalho.css';
 
 
 function Cabecalho({ onNovoVideoClick }) {
-    const corBack = "#000000";
+    
     
     return (
         <header className='cabecalho'>
