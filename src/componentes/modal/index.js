@@ -6,11 +6,15 @@ const Modal = ({ onClose, adicionarVideo }) => {
         videoUrl: '',
         title: '',
         description: '',
+        destaque: false,
     });
 
     const handleInputChange = (event) => {
-        const { name, value } = event.target;
-        setFormData({ ...formData, [name]: value });
+        const { name, value, type, checked } = event.target;
+        setFormData({
+            ...formData,
+            [name]: type === 'checkbox' ? checked : value,
+        });
     };
 
     const handleSubmit = (event) => {
@@ -44,6 +48,17 @@ const Modal = ({ onClose, adicionarVideo }) => {
                         value={formData.description}
                         onChange={handleInputChange}
                     ></textarea>
+                    <div className="checkbox-container">
+                        <label>
+                            <input
+                                type="checkbox"
+                                name="destaque"
+                                checked={formData.destaque}
+                                onChange={handleInputChange}
+                            />
+                            Destaque
+                        </label>
+                    </div>
                     <button type="submit">Adicionar Vídeo</button>
                 </form>
             </div>

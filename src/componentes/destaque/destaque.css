@@ -1,16 +1,22 @@
 .video-carrossel {
     position: relative;
-    height: 60vh;
+    height: 70vh;
+    max-width: 90%;
     background-size: cover;
     background-position: center;
     color: #fff;
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 15px 5px rgba(128, 0, 128, 0.5);
+    margin-top: 20px;
 }
 
 .carrossel-content {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
@@ -19,14 +25,23 @@
     background-color: rgba(0, 0, 0, 0.6);
     padding: 20px;
     border-radius: 10px;
+    width: 40%;
     max-width: 40%;
+    margin-right: 20px;
 }
 
 .video-container {
-    flex-grow: 1;
+    width: 60%;
+    max-width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 45vh;
+    border-radius: 10px;
 }
 
 .navigation {
@@ -39,16 +54,17 @@
 }
 
 .nav-button {
-    background-color: #800080;
+    background-color: transparent;
     border: none;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 50%;
+    color: #800080;
     font-size: 1.5rem;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: transform 0.3s;
+    box-shadow: 0 0 10px rgba(128, 0, 128, 0.5);
+    border-radius: 50%;
+    padding: 5px;
 }
 
 .nav-button:hover {
-    background-color: #4b0082;
+    transform: scale(1.1);
 }

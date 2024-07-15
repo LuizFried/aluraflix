@@ -12,15 +12,19 @@ function App() {
             id: 1,
             title: 'Teste Alura',
             description: 'Video promocional Alura',
-            videoId: 'nbcPBKqFGXU'
+            videoId: 'nbcPBKqFGXU',
+            destaque: false
         },
         {
             id: 2,
             title: 'Título do Vídeo 2',
             description: 'Descrição do Vídeo 2',
-            videoId: 'VIDEO_ID_2'
+            videoId: 'VIDEO_ID_2',
+            destaque: false
         },
     ]);
+
+    const [videosDestaque, setVideosDestaque] = useState([]);
 
     const abrirFormulario = () => {
         setMostrarFormulario(true);
@@ -37,21 +41,29 @@ function App() {
             id: newId,
             title: formData.title,
             description: formData.description,
-            videoId: videoId
+            videoId: videoId,
+            destaque: formData.destaque
         };
+
         setVideosData([...videosData, newVideo]);
+        if (formData.destaque) {
+            setVideosDestaque([...videosDestaque, newVideo]);
+        }
         fecharFormulario();
     };
 
     const excluirVideo = (id) => {
         const filteredVideos = videosData.filter(video => video.id !== id);
         setVideosData(filteredVideos);
+
+        const filteredDestaqueVideos = videosDestaque.filter(video => video.id !== id);
+        setVideosDestaque(filteredDestaqueVideos);
     };
 
     return (
         <div className="App">
             <Cabecalho onNovoVideoClick={abrirFormulario} />
-            <VideoCarrossel videos={videosData} />
+            <VideoCarrossel videos={videosDestaque} />
             <VideoSection videos={videosData} onDelete={excluirVideo} />
             {mostrarFormulario && <Modal onClose={fecharFormulario} adicionarVideo={adicionarVideo} />}
         </div>

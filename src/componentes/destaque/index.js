@@ -21,8 +21,6 @@ const VideoCarrossel = ({ videos }) => {
                     </div>
                     <div className='video-container'>
                         <iframe
-                            width="90%"
-                            height="90%"
                             src={`https://www.youtube.com/embed/${video.videoId}`}
                             title={`YouTube video ${video.id}`}
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

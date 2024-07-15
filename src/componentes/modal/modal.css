@@ -20,13 +20,13 @@
     max-width: 500px;
     color: #fff;
     position: relative;
-    border: 2px solid rgba(128, 0, 128, 0.5); 
+    border: 2px solid rgba(128, 0, 128, 0.5); /* Borda roxa leve */
 }
 
 .close {
     position: absolute;
-    top: 15px; 
-    right: 10px; 
+    top: 15px; /* Ajustado para descer um pouco */
+    right: 15px; /* Ajustado para entrar mais no modal */
     font-size: 1.5rem;
     cursor: pointer;
     color: #800080;
@@ -62,4 +62,19 @@ button {
 
 button:hover {
     background-color: #800080;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-container label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkbox-container input {
+    margin-right: 10px;
 }
