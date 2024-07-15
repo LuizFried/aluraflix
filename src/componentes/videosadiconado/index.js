@@ -1,6 +1,5 @@
-// VideoSection.js
 import React from 'react';
-import './videos.css'; // Certifique-se de ter o arquivo de estilos correto importado
+import './videos.css';
 
 const VideoSection = ({ videos }) => {
     return (

@@ -1,4 +1,3 @@
-// src/componentes/videoSection/VideoSection.js
 import React from 'react';
 import VideoCard from '../videocard';
 import './videosection.css';

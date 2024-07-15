@@ -1,4 +1,3 @@
-// src/componentes/modal/Modal.js
 import React, { useState } from 'react';
 import './modal.css';
 
@@ -6,7 +5,7 @@ const Modal = ({ onClose, adicionarVideo }) => {
     const [formData, setFormData] = useState({
         videoUrl: '',
         title: '',
-        description: ''
+        description: '',
     });
 
     const handleInputChange = (event) => {

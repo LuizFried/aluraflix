@@ -1,4 +1,3 @@
-// src/componentes/cabecalho/Cabecalho.js
 import React from 'react';
 import './cabecalho.css';
 import hexToRgba from 'hex-to-rgba';

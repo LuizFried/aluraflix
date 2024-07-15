@@ -1,4 +1,3 @@
-// src/componentes/destaque/Destaque.js
 import React, { useState } from 'react';
 import './destaque.css';
 

@@ -1,4 +1,3 @@
-// src/App.js
 import React, { useState } from 'react';
 import Cabecalho from './componentes/cabecalho';
 import VideoCarrossel from './componentes/destaque';
